@@ -3,7 +3,7 @@
 import time
 import paho.mqtt.client as mqtt
 
-# Change broker_address to match your Pi
+# Change broker_address to match the address of your Pi
 broker_address = "192.168.0.200"
 client = mqtt.Client("TESTPC")
 client.connect(broker_address)
