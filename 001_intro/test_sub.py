@@ -6,6 +6,7 @@ def on_message(client, userdata, message):
    print ('got a message')
    print (message.payload) 
 
+# Change broker_address to match your Pi"
 broker_address = '192.168.0.200'
 client = mqtt.Client("TEST")
 client.on_message = on_message
