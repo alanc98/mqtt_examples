@@ -12,15 +12,15 @@ from Adafruit_IO import MQTTClient
 # Set to your Adafruit IO key.
 # Remember, your key is a secret,
 # so make sure not to publish it when you publish this code!
-ADAFRUIT_IO_KEY = 'PUT YOUR KEY HERE'
+ADAFRUIT_IO_KEY = 'PUT_YOUR_KEY_HERE'
 
 # Set to your Adafruit IO username.
 # (go to https://accounts.adafruit.com to find your username)
-ADAFRUIT_IO_USERNAME = 'PUT YOUR USERNAME HERE'
+ADAFRUIT_IO_USERNAME = 'PUT_YOUR_ADAFRUIT_IO_USERNAME_HERE'
 
 # Set to the MQTT topic for your Adafruit IO feed MQTT topic name
-# it does not have the full mqtt name like 'alanc98/feeds/mqtt-topic'
 ADAFRUIT_IO_MQTT_TOPIC = 'mqtt-temp'
+# ADAFRUIT_IO_MQTT_TOPIC = 'alanc98/feeds/mqtt-temp'
 
 # Define callback functions which will be called when certain events happen.
 def connected(client):
@@ -28,7 +28,7 @@ def connected(client):
     # This is a good place to subscribe to feed changes.  The client parameter
     # passed to this function is the Adafruit IO MQTT client so you can make
     # calls against it easily.
-    print('Connected to Adafruit IO!  Listening for DemoFeed changes...')
+    print('Connected to Adafruit IO!')
     # Subscribe to changes on a feed named DemoFeed.
     # client.subscribe('DemoFeed')
 
@@ -69,7 +69,7 @@ while True:
     value += 5
     print('Publishing {0} to Adafruit IO MQTT.'.format(value))
     client.publish(ADAFRUIT_IO_MQTT_TOPIC, value)
-    time.sleep(5)
+    time.sleep(2)
 
 # Another option is to pump the message loop yourself by periodically calling
 # the client loop function.  Notice how the loop below changes to call loop

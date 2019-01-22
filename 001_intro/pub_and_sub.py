@@ -35,9 +35,12 @@ client.subscribe('test/temperature')
 # it can do something else, or just kill time while the 
 # MQTT client is waiting for messages in the background
 # we could publish MQTT messages here if we wnated to
+counter = 0
 try:
    while True:
-      time.sleep(5)
+      client.publish('test/counter', counter)
+      counter+=1
+      time.sleep(1)
 
 # if the user presses control-c to quit, stop the MQTT loop
 except KeyboardInterrupt:
