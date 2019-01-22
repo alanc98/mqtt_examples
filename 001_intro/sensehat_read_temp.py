@@ -10,4 +10,5 @@ while True:
     temp = sense.temp
     pixels = [red if i < temp else blue for i in range(64)]
     sense.set_pixels(pixels)
+    print temp
 

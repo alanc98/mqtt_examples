@@ -4,7 +4,7 @@ import paho.mqtt.client as mqtt
 
 # Change broker_address to match the address of your Pi
 broker_address = "192.168.0.200"
-client = mqtt.Client("PYTHONTEST")
+client = mqtt.Client("PYTHONPUB1")
 client.connect(broker_address)
 
 # Publish an MQTT message and quit

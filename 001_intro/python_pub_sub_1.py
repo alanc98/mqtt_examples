@@ -13,7 +13,7 @@ def on_message(client, userdata, message):
 broker_address = '192.168.0.200'
 
 # Create the MQTT client object
-client = mqtt.Client("PYTHONTEST")
+client = mqtt.Client("PYTHONPUBSUB")
 
 # Set the message callback function
 client.on_message = on_message
